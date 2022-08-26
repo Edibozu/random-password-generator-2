@@ -13,6 +13,7 @@ function generatePassword() {
   //ALL YOUR CODE GOES HERE
   console.log("Hey, You clicked me!");
 
+  // Empty arrays that will eventually store the characters that the user chooses and then the final password.
   var chosenCharacters = [];
   var finalPassword = [];
 
@@ -105,6 +106,7 @@ function generatePassword() {
   var passwordLength = prompt(
     "How many characters would you like your password to contain?"
   );
+  console.log(passwordLength);
   // Password has to contain between 8 and 128 characters.
   if (passwordLength > 7 && passwordLength < 129) {
   } else {
@@ -112,7 +114,16 @@ function generatePassword() {
     alert("Password length has to be between 8 and 128 characters!");
   }
 
- 
+  // Prompts the user to select whether they would like to add lowercase letters in their password.
+  var confirmLowerCase = confirm(
+    "Would you like your password to contain lowercase letters?"
+  );
+
+  // If they do choose to include lowercase characters, they will be included into the chosenCharacters array, that was formerly empty.
+  if (confirmLowerCase) {
+    chosenCharacters = chosenCharacters.concat(lowerCase);
+    console.log(chosenCharacters);
+  }
 
   return "Password will go here.";
 }
