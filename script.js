@@ -145,6 +145,16 @@ function generatePassword() {
     console.log(chosenCharacters);
   }
 
+  //conditional for user if in case they fail to chhose any of the character options.
+  if (
+    confirmLowerCase === false &&
+    confirmUpperCase === false &&
+    confirmSpecial === false &&
+    confirmNumbers === false
+  ) {
+    alert("Please choose at least 1 character type!");
+  }
+
   return "Password will go here.";
 }
 
