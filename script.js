@@ -13,6 +13,9 @@ function generatePassword() {
   //ALL YOUR CODE GOES HERE
   console.log("Hey, You clicked me!");
 
+  var chosenCharacters = [];
+  var finalPassword = [];
+
   // Possible character variables.
   var lowerCase = [
     "a",
@@ -108,6 +111,8 @@ function generatePassword() {
     // If password has less than 8 or more than 128 characters, users will be alerted with this message.
     alert("Password length has to be between 8 and 128 characters!");
   }
+
+ 
 
   return "Password will go here.";
 }
