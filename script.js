@@ -117,9 +117,7 @@ function generatePassword() {
   }
 
   // Prompts the user to chhose whether they'd like to include lowercase letters in their password.
-  var confirmLowerCase = confirm(
-    "Would you like your password to contain lowercase letters?"
-  );
+  var confirmLowerCase = confirm("Click OK to include lowercase letters.");
   // If they do choose to include lowercase characters, they will be included into the chosenCharacters array, that was formerly empty.
   if (confirmLowerCase) {
     chosenCharacters = chosenCharacters.concat(lowerCase);
@@ -127,27 +125,21 @@ function generatePassword() {
   }
 
   // Prompts the user to chhose whether they'd like to include uppercase letters in their password.
-  var confirmUpperCase = confirm(
-    "Would you like your password to contain uppercase letters?"
-  );
+  var confirmUpperCase = confirm("Click OK to include uppercase letters.");
   if (confirmUpperCase) {
     chosenCharacters = chosenCharacters.concat(upperCase);
     console.log(chosenCharacters);
   }
 
   // Prompts the user to chhose whether they'd like to include special characters in their password.
-  var confirmSpecial = confirm(
-    "Would you like your password to contain special character?"
-  );
+  var confirmSpecial = confirm("Click OK to include special characters.");
   if (confirmSpecial) {
     chosenCharacters = chosenCharacters.concat(special);
     console.log(chosenCharacters);
   }
 
   // Prompts the user to chhose whether they'd like to include numbers in their password.
-  var confirmNumbers = confirm(
-    "Would you like your password to contain numbers?"
-  );
+  var confirmNumbers = confirm("Click OK to include numbers.");
   if (confirmNumbers) {
     chosenCharacters = chosenCharacters.concat(numbers);
     console.log(chosenCharacters);
