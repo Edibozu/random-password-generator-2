@@ -102,6 +102,8 @@ function generatePassword() {
     "~",
   ];
 
+  var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
   // Pormpting the user with selecting how many characters they would like their password to contain.
   var passwordLength = prompt(
     "How many characters would you like your password to contain?"
@@ -114,14 +116,40 @@ function generatePassword() {
     alert("Password length has to be between 8 and 128 characters!");
   }
 
-  // Prompts the user to select whether they would like to add lowercase letters in their password.
+  // Prompts the user to chhose whether they'd like to include lowercase letters in their password.
   var confirmLowerCase = confirm(
     "Would you like your password to contain lowercase letters?"
   );
-
   // If they do choose to include lowercase characters, they will be included into the chosenCharacters array, that was formerly empty.
   if (confirmLowerCase) {
     chosenCharacters = chosenCharacters.concat(lowerCase);
+    console.log(chosenCharacters);
+  }
+
+  // Prompts the user to chhose whether they'd like to include uppercase letters in their password.
+  var confirmUpperCase = confirm(
+    "Would you like your password to contain uppercase letters?"
+  );
+  if (confirmUpperCase) {
+    chosenCharacters = chosenCharacters.concat(upperCase);
+    console.log(chosenCharacters);
+  }
+
+  // Prompts the user to chhose whether they'd like to include special characters in their password.
+  var confirmSpecial = confirm(
+    "Would you like your password to contain special character?"
+  );
+  if (confirmSpecial) {
+    chosenCharacters = chosenCharacters.concat(special);
+    console.log(chosenCharacters);
+  }
+
+  // Prompts the user to chhose whether they'd like to include numbers in their password.
+  var confirmNumbers = confirm(
+    "Would you like your password to contain numbers?"
+  );
+  if (confirmNumbers) {
+    chosenCharacters = chosenCharacters.concat(numbers);
     console.log(chosenCharacters);
   }
 
