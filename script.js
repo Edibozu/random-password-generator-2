@@ -108,7 +108,7 @@ function generatePassword() {
   var passwordLength = prompt(
     "How many characters would you like your password to contain?"
   );
-  console.log(passwordLength);
+  // console.log(passwordLength);
   // Password has to contain between 8 and 128 characters.
   if (passwordLength > 7 && passwordLength < 129) {
   } else {
@@ -121,28 +121,28 @@ function generatePassword() {
   // If they do choose to include lowercase characters, they will be included into the chosenCharacters array, that was formerly empty.
   if (confirmLowerCase) {
     chosenCharacters = chosenCharacters.concat(lowerCase);
-    console.log(chosenCharacters);
-  }
+  //   console.log(chosenCharacters);
+  // }
 
   // Prompts the user to chhose whether they'd like to include uppercase letters in their password.
   var confirmUpperCase = confirm("Click OK to include uppercase letters.");
   if (confirmUpperCase) {
     chosenCharacters = chosenCharacters.concat(upperCase);
-    console.log(chosenCharacters);
+    // console.log(chosenCharacters);
   }
 
   // Prompts the user to chhose whether they'd like to include special characters in their password.
   var confirmSpecial = confirm("Click OK to include special characters.");
   if (confirmSpecial) {
     chosenCharacters = chosenCharacters.concat(special);
-    console.log(chosenCharacters);
+    // console.log(chosenCharacters);
   }
 
   // Prompts the user to chhose whether they'd like to include numbers in their password.
   var confirmNumbers = confirm("Click OK to include numbers.");
   if (confirmNumbers) {
     chosenCharacters = chosenCharacters.concat(numbers);
-    console.log(chosenCharacters);
+    // console.log(chosenCharacters);
   }
 
   //conditional for user if in case they fail to chhose any of the character options.
@@ -153,6 +153,14 @@ function generatePassword() {
     confirmNumbers === false
   ) {
     alert("Please choose at least 1 character type!");
+  }
+// For loop that will limit the password length to the # the user picked.
+  for (var i = 0; i < parseInt(passwordLength); i++) {
+    //This will randomize the characters based on the # length and type of characters the user chose.
+    var randomCharacters = Math.floor(Math.random() * chosenCharacters.length);
+    // console.log(randomCharacters);
+    finalPassword = finalPassword + chosenCharacters[randomCharacters];
+    // console.log(finalPassword);
   }
 
   return "Password will go here.";
