@@ -121,8 +121,8 @@ function generatePassword() {
   // If they do choose to include lowercase characters, they will be included into the chosenCharacters array, that was formerly empty.
   if (confirmLowerCase) {
     chosenCharacters = chosenCharacters.concat(lowerCase);
-  //   console.log(chosenCharacters);
-  // }
+    // console.log(chosenCharacters);
+  }
 
   // Prompts the user to chhose whether they'd like to include uppercase letters in their password.
   var confirmUpperCase = confirm("Click OK to include uppercase letters.");
@@ -154,7 +154,7 @@ function generatePassword() {
   ) {
     alert("Please choose at least 1 character type!");
   }
-// For loop that will limit the password length to the # the user picked.
+  // For loop that will limit the password length to the # the user picked.
   for (var i = 0; i < parseInt(passwordLength); i++) {
     //This will randomize the characters based on the # length and type of characters the user chose.
     var randomCharacters = Math.floor(Math.random() * chosenCharacters.length);
@@ -163,7 +163,7 @@ function generatePassword() {
     // console.log(finalPassword);
   }
 
-  return "Password will go here.";
+  return finalPassword;
 }
 
 // Add event listener to generate button
